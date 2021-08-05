@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--suppress ALL -->
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.Queries_Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="600.0">
+         <children>
+            <StackPane>
+               <children>
+                  <TitledPane fx:id="columns_4_BOX" animated="false" collapsible="false" prefHeight="600.0" text="Таблица на 4">
+                     <content>
+                        <TableView fx:id="columns_4_TABLE">
+                           <columns>
+                              <TableColumn fx:id="on4_1_COLUMN" prefWidth="195.0" text="C1" />
+                              <TableColumn fx:id="on4_2_COLUMN" prefWidth="195.0" text="C2" />
+                              <TableColumn fx:id="on4_3_COLUMN" prefWidth="195.0" text="C3" />
+                              <TableColumn fx:id="on4_4_COLUMN" prefWidth="195.0" text="C4" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="columns_2_BOX" animated="false" collapsible="false" prefHeight="600.0" text="Таблица на 2">
+                     <content>
+                        <TableView fx:id="columns_2_TABLE">
+                          <columns>
+                            <TableColumn fx:id="on2_1_COLUMN" prefWidth="195.0" text="C1" />
+                            <TableColumn fx:id="on2_2_COLUMN" prefWidth="195.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </TitledPane>
+               </children>
+            </StackPane>
+            <Label fx:id="recordsCounter_FIELD" alignment="CENTER" prefWidth="800.0" text="Всего записей:">
+               <font>
+                  <Font name="Monotype Corsiva" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

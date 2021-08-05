@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--suppress ALL -->
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.Main_Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.75" prefHeight="600.0" prefWidth="1000.0">
+        <items>
+            <StackPane>
+               <children>
+                  <Pane fx:id="titleText_BOX" minWidth="0.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Text layoutX="44.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вас приветствует БД&#10;&quot;Мобильный оператор&quot;" textAlignment="CENTER">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <VBox fx:id="show_BOX" minWidth="0.0">
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                     <children>
+                        <StackPane minWidth="0.0">
+                           <children>
+                              <StackPane fx:id="forms_BOX">
+                                 <children>
+                                    <TitledPane fx:id="techInfF_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Форма ТЕХНИЧЕСКА ИНФОРМАЦИЯ">
+                                       <content>
+                                          <VBox alignment="CENTER" maxWidth="350.0" spacing="5.0">
+                                             <children>
+                                                <TextField fx:id="drSR_TechInfF_FIELD" promptText="Dr/sr" />
+                                                <TextField fx:id="serverID_TechInfF_FIELD" promptText="Серверный ID" />
+                                                <TextField fx:id="portSAP_TechInfF_FIELD" promptText="Port/sap" />
+                                                <TextField fx:id="speed_TechInfF_FIELD" promptText="Скорость (МБ/с)" />
+                                                <TextField fx:id="ip_TechInfF_FIELD" promptText="Ip" />
+                                                <TextField fx:id="scheme_TechInfF_FIELD" promptText="Наличие схемы" />
+                                                <TextField fx:id="pm_TechInfF_FIELD" promptText="Pm" />
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="use_TechInfF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Применить" />
+                                                      <HBox minWidth="0.0">
+                                                         <children>
+                                                            <Button fx:id="prev_TechInfF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&lt;" />
+                                                            <TextField fx:id="cur_TechInfF_FIELD" alignment="CENTER" prefWidth="120.0" text="0/0" />
+                                                            <Button fx:id="next_TechInfF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&gt;" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button fx:id="cancel_TechInfF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Отмена" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="clientsF_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Форма КЛИЕНТЫ">
+                                       <content>
+                                          <VBox alignment="CENTER" maxWidth="350.0" spacing="5.0">
+                                             <children>
+                                                <TextField fx:id="name_ClientsF_FIELD" promptText="Наименование" />
+                                                <ComboBox fx:id="techInf_ClientsF_CHOICE" prefWidth="1000.0" promptText="Техническая информация" />
+                                                <ComboBox fx:id="city_ClientsF_CHOICE" prefWidth="350.0" promptText="Город" />
+                                                <TextField fx:id="address_ClientsF_FIELD" promptText="Адрес" />
+                                                <TextArea fx:id="contactInf_ClientsF_FIELD" minWidth="0.0" prefHeight="125.0" promptText="Контактная информация" />
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="use_ClientsF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Применить" />
+                                                      <HBox minWidth="0.0">
+                                                         <children>
+                                                            <Button fx:id="prev_ClientsF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&lt;" />
+                                                            <TextField fx:id="cur_ClientsF_FIELD" alignment="CENTER" prefWidth="120.0" text="0/0" />
+                                                            <Button fx:id="next_ClientsF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&gt;" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button fx:id="cancel_ClientsF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Отмена" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="finOpsF_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Форма ФИНАНСОВЫЕ ОПЕРАЦИИ">
+                                       <content>
+                                          <VBox alignment="CENTER" maxWidth="350.0" spacing="5.0">
+                                             <children>
+                                                <ComboBox fx:id="bill_FinOpsF_CHOICE" prefWidth="1000.0" promptText="Счёт" />
+                                                <ComboBox fx:id="transactionType_FinOpsF_CHOICE" prefWidth="1000.0" promptText="Тип транзакции" />
+                                                <TextField fx:id="sum_FinOpsF_FIELD" prefHeight="25.0" prefWidth="350.0" promptText="Сумма" />
+                                                <TextField fx:id="operationDate_FinOpsF_FIELD" prefHeight="25.0" prefWidth="350.0" promptText="Дата операции" />
+                                                <ComboBox fx:id="contractPart_FinOpsF_CHOICE" prefWidth="1000.0" promptText="Часть контракта" />
+                                                <TextArea fx:id="comment_FinOpsF_FIELD" prefHeight="125.0" prefWidth="350.0" promptText="Комментарий" />
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="use_FinOpsF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Применить" />
+                                                      <HBox minWidth="0.0">
+                                                         <children>
+                                                            <Button fx:id="prev_FinOpsF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&lt;" />
+                                                            <TextField fx:id="cur_FinOpsF_FIELD" alignment="CENTER" prefWidth="120.0" text="0/0" />
+                                                            <Button fx:id="next_FinOpsF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&gt;" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button fx:id="cancel_FinOpsF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Отмена" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="contractsF_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Форма КОНТРАКТЫ">
+                                       <content>
+                                          <VBox alignment="CENTER" maxWidth="350.0" spacing="5.0">
+                                             <children>
+                                                <TextField fx:id="name_ContractsF_FIELD" promptText="Название" />
+                                                <ComboBox fx:id="client_ContractsF_CHOICE" prefWidth="1000.0" promptText="Клиент" />
+                                                <TextField fx:id="preparationDate_ContractsF_FIELD" promptText="Дата заключения" />
+                                                <TextField fx:id="startDate_ContractsF_FIELD" promptText="Дата начала" />
+                                                <ComboBox fx:id="status_ContractsF_CHOICE" prefWidth="350.0" promptText="Статус" />
+                                                <TextField fx:id="endDate_ContractsF_FIELD" promptText="Дата завершения" />
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="use_ContractsF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Применить" />
+                                                      <HBox minWidth="0.0">
+                                                         <children>
+                                                            <Button fx:id="prev_ContractsF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&lt;" />
+                                                            <TextField fx:id="cur_ContractsF_FIELD" alignment="CENTER" prefWidth="120.0" text="0/0" />
+                                                            <Button fx:id="next_ContractsF_BTN" mnemonicParsing="false" prefWidth="45.0" text="&gt;" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button fx:id="cancel_ContractsF_BTN" mnemonicParsing="false" prefWidth="150.0" text="Отмена" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                              </StackPane>
+                              <StackPane fx:id="tables_BOX">
+                                 <children>
+                                    <TitledPane fx:id="techInfT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица ТЕХНИЧЕСКА ИНФОРМАЦИЯ">
+                                       <content>
+                                          <TableView fx:id="techInf_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn fx:id="drSR_TechInfT_COLUMN" minWidth="0.0" prefWidth="108.0" text="dr/sr" />
+                                                <TableColumn fx:id="serverID_TechInfT_COLUMN" prefWidth="113.0" text="серв. ID" />
+                                                <TableColumn fx:id="portSAP_TechInfT_COLUMN" prefWidth="112.0" text="port/sap" />
+                                                <TableColumn fx:id="speed_TechInfT_COLUMN" prefWidth="112.0" text="скорость (МБ/с)" />
+                                                <TableColumn fx:id="ip_TechInfT_COLUMN" prefWidth="103.0" text="ip" />
+                                                <TableColumn fx:id="scheme_TechInfT_COLUMN" prefWidth="105.0" text="наличие схемы" />
+                                                <TableColumn fx:id="pm_TechInfT_COLUMN" prefWidth="91.0" text="pm" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="commonCatalogT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица [Обычный справочник]">
+                                       <content>
+                                          <TableView fx:id="commonCatalog_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn fx:id="name_CommonCatalogT_COLUMN" minWidth="0.0" prefWidth="500.0" text="название" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="clientsT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица КЛИЕНТЫ">
+                                       <content>
+                                          <TableView fx:id="clients_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                            <columns>
+                                              <TableColumn fx:id="name_ClientsT_COLUMN" minWidth="0.0" prefWidth="200.0" text="наименование" />
+                                                <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="техническая информация">
+                                                   <columns>
+                                                    <TableColumn fx:id="serverID_ClientsT_COLUMN" prefWidth="75.0" text="серв. ID" />
+                                                    <TableColumn fx:id="portSAP_ClientsT_COLUMN" prefWidth="75.0" text="port/sap" />
+                                                    <TableColumn fx:id="speed_ClientsT_COLUMN" prefWidth="100.0" text="скорость (МБ/с)" />
+                                                   </columns>
+                                                </TableColumn>
+                                              <TableColumn fx:id="city_ClientsT_COLUMN" prefWidth="120.0" text="город" />
+                                              <TableColumn fx:id="address_ClientsT_COLUMN" prefWidth="200.0" text="адрес" />
+                                              <TableColumn fx:id="contactInf_ClientsT_COLUMN" prefWidth="200.0" text="контакт. информ." />
+                                            </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="finOpsT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица ФИНАНСОВЫЕ ОПЕРАЦИИ">
+                                       <content>
+                                          <TableView fx:id="finOps_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="счёт">
+                                                   <columns>
+                                                      <TableColumn fx:id="client_FinOpsT_COLUMN" prefWidth="200.0" text="клиент" />
+                                                      <TableColumn fx:id="balance_FinOpsT_COLUMN" prefWidth="100.0" text="баланс" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="transactionType_FinOpsT_COLUMN" prefWidth="130.0" text="тип транзакции" />
+                                                <TableColumn fx:id="sum_FinOpsT_COLUMN" text="сумма" />
+                                                <TableColumn fx:id="operationDate_FinOpsT_COLUMN" prefWidth="100.0" text="дата операции" />
+                                                <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="часть контракта">
+                                                   <columns>
+                                                      <TableColumn fx:id="contract_FinOpsT_COLUMN" prefWidth="100.0" text="контракт" />
+                                                      <TableColumn fx:id="tariff_FinOpsT_COLUMN" prefWidth="150.0" text="тариф" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="comment_FinOpsT_COLUMN" prefWidth="200.0" text="комментарий" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="contractPartsT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица ЧАСТИ КОНТРАКТОВ">
+                                       <content>
+                                          <TableView fx:id="contractParts_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn fx:id="contract_ContractPartsT_COLUMN" minWidth="0.0" prefWidth="200.0" text="контракт" />
+                                                <TableColumn fx:id="tariff_ContractPartsT_COLUMN" minWidth="0.0" prefWidth="250.0" text="тариф" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="billsT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица СЧЕТА">
+                                       <content>
+                                          <TableView fx:id="bills_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn fx:id="client_BillsT_COLUMN" minWidth="0.0" prefWidth="250.0" text="клиент" />
+                                                <TableColumn fx:id="balance_BillsT_COLUMN" minWidth="0.0" prefWidth="200.0" text="баланс" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tariffsT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица ТАРИФЫ">
+                                       <content>
+                                          <TableView fx:id="tariffs_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn fx:id="name_TariffsT_COLUMN" minWidth="0.0" prefWidth="200.0" text="название" />
+                                                <TableColumn fx:id="service_TariffsT_COLUMN" prefWidth="200.0" text="услуга" />
+                                                <TableColumn fx:id="chargeType_TariffsT_COLUMN" prefWidth="150.0" text="тип оплаты" />
+                                                <TableColumn fx:id="cost_TariffsT_COLUMN" prefWidth="120.0" text="стоимость" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="contractsT_BOX" collapsible="false" minWidth="0.0" prefHeight="600.0" text="Таблица КОНТРАКТЫ">
+                                       <content>
+                                          <TableView fx:id="contracts_TABLE" prefHeight="600.0" prefWidth="1000.0">
+                                             <columns>
+                                                <TableColumn fx:id="name_ContractsT_COLUMN" minWidth="0.0" prefWidth="175.0" text="название" />
+                                                <TableColumn fx:id="client_ContractsT_COLUMN" prefWidth="200.0" text="клиент" />
+                                                <TableColumn fx:id="preparationDate_ContractsT_COLUMN" prefWidth="120.0" text="дата заключения" />
+                                                <TableColumn fx:id="startDate_ContractsT_COLUMN" prefWidth="120.0" text="дата начала" />
+                                                <TableColumn fx:id="status_ContractsT_COLUMN" prefWidth="100.0" text="статус" />
+                                                <TableColumn fx:id="endDate_ContractsT_COLUMN" prefWidth="120.0" text="дата завершения" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </StackPane>
+                        <Label fx:id="recordsCounter_FIELD" alignment="CENTER" prefWidth="1000.0" text="Всего записей:">
+                           <font>
+                              <Font name="Monotype Corsiva" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <VBox alignment="TOP_CENTER" minWidth="0.0" spacing="15.0">
+               <children>
+                  <Button fx:id="toMain_BTN" minHeight="25.0" mnemonicParsing="false" prefWidth="1000.0" text="На главную" />
+                  <Button fx:id="generation_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Воссоздать данные в базе" />
+                  <SplitPane fx:id="menu_BOX" dividerPositions="0.5" orientation="VERTICAL" prefHeight="600.0">
+                     <items>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" minHeight="0.0">
+                           <content>
+                              <Accordion>
+                                 <panes>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Справочники">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button fx:id="transactionTypes_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Типы транзакций" />
+                                                <Button fx:id="services_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Услуги" />
+                                                <Button fx:id="paymentTypes_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Типы оплаты" />
+                                                <Button fx:id="tariffs_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Тарифы" />
+                                                <Button fx:id="contractStatuses_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Статусы контрактов" />
+                                                <Button fx:id="clientCities_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Города клиентов" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Основные таблицы">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button fx:id="finOps_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Финансовые операции" />
+                                                <Button fx:id="clients_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Клиенты" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Дополнительные таблицы">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button fx:id="contractParts_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Части контрактов" />
+                                                <Button fx:id="contracts_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Контракты" />
+                                                <Button fx:id="techInf_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Техническая информация" />
+                                                <Button fx:id="bills_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Счета" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Специальные запросы">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button fx:id="INNER_WHERE_FK_Tariffs_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Отбор ТАРИФОВ по услуге" />
+                                                <Button fx:id="INNER_WHERE_FK_Contracts_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Отбор КОНТРАКТОВ по клиенту" />
+                                                <Button fx:id="INNER_WHERE_DATE_FinOps_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Отбор ФИНАНСОВЫХ ОПЕРАЦИЙ по дате операции" wrapText="true" />
+                                                <Button fx:id="INNER_WHERE_DATE_Contracts_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Отбор КОНТРАКТОВ по году завершения" />
+                                                <Separator prefWidth="200.0" />
+                                                <Button fx:id="INNER_no_WHERE_Clients_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Спец. представление КЛИЕНТОВ" />
+                                                <Button fx:id="INNER_no_WHERE_Tariffs_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Спец. представление ТАРИФОВ" />
+                                                <Button fx:id="INNER_no_WHERE_ContractParts_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Спец. представление ЧАСТЕЙ КОНТРАКТОВ" />
+                                                <Separator prefWidth="200.0" />
+                                                <Button fx:id="LEFT_OUTER_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="ФИНАНСОВЫЕ ОПЕРАЦИИ без частей контрактов" />
+                                                <Button fx:id="RIGHT_OUTER_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="КЛИЕНТЫ с ограниченными подробностями" />
+                                                <Button fx:id="SELECT_$_FROM_SELECT_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Спец. представление ФИНАНСОВЫХ ОПЕРАЦИЙ" />
+                                                <Separator prefWidth="200.0" />
+                                                <Button fx:id="AGGREGATE_no_WHERE_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Количество КЛИЕНТОВ, группир. по скорости и-нета" />
+                                                <Button fx:id="AGGREGATE_WHERE_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Средняя стоимость ТАРИФОВ с указанной услугой" />
+                                                <Button fx:id="AGGREGATE_HAVING_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Количество ФИНАНСОВЫХ ОПЕРАЦИЙ с проходящей суммой более 500 у.е." />
+                                                <Button fx:id="AGGREGATE_WHERE_HAVING_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Сумма отрицательных балансов СЧЕТОВ у указанного клиента" />
+                                                <Button fx:id="AGGREGATE_$_FROM_SELECT_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Спец. представление групп КЛИЕНТОВ" />
+                                                <Button fx:id="SELECT_$_WHERE_SELECT_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="СЧЕТА клиентов, наименования который начинаются на указанную часть" />
+                                                <Separator prefWidth="200.0" />
+                                                <Button fx:id="SPECIAL_QR_1_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Топ 3 КЛИЕНТОВ по фин.операциям" />
+                                                <Button fx:id="SPECIAL_QR_2_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Сред. к-во ФИН.ОПЕРАЦИЙ" />
+                                                <Button fx:id="SPECIAL_QR_3_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="К-во КЛИЕНТОВ соверш. фин.опер. за промежуток" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Диаграммы">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button fx:id="dimension_1_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Одномерная" />
+                                                <Button fx:id="dimension_2_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Двумерная" />
+                                                <Button fx:id="dimension_3_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Трёхмерная" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                 </panes>
+                              </Accordion>
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fx:id="subMenu_BOX" fitToWidth="true" hbarPolicy="NEVER" minHeight="0.0">
+                           <content>
+                              <Accordion>
+                                 <panes>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Добавление записей">
+                                       <content>
+                                          <VBox prefWidth="1000.0" spacing="5.0">
+                                             <children>
+                                                <Button fx:id="handAdd_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Вручную" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Изменение записей">
+                                       <content>
+                                          <VBox minWidth="0.0" prefWidth="1000.0" spacing="5.0">
+                                             <children>
+                                                <Button fx:id="fieldsChange_BTN" minHeight="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="По полям" />
+                                                <Button fx:id="choseChange_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Выбранную" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Удаление записей">
+                                       <content>
+                                          <VBox prefWidth="1000.0" spacing="5.0">
+                                             <children>
+                                                <Button fx:id="fieldsDelete_BTN" minHeight="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="По полям" />
+                                                <Button fx:id="choseDelete_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Текущую" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane animated="false" prefWidth="1000.0" text="Поиск записей">
+                                       <content>
+                                          <VBox prefWidth="1000.0" spacing="5.0">
+                                             <children>
+                                                <Button fx:id="searchRows_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="По полям" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </TitledPane>
+                                    <TitledPane fx:id="showType_BOX" animated="false" minHeight="0.0" prefWidth="1000.0" text="Представление данных">
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                       <content>
+                                          <HBox spacing="5.0">
+                                             <children>
+                                                <ToggleButton fx:id="tableShowType_BTN" mnemonicParsing="false" prefWidth="1000.0" selected="true" text="Таблицей">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="dataShowing" />
+                                                   </toggleGroup>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="recordsShowType_BTN" mnemonicParsing="false" prefWidth="1000.0" text="По записям" toggleGroup="$dataShowing" />
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </content>
+                                    </TitledPane>
+                                 </panes>
+                              </Accordion>
+                           </content>
+                        </ScrollPane>
+                     </items>
+                  </SplitPane>
+                  <Accordion minWidth="0.0">
+                    <panes>
+                      <TitledPane animated="false" prefHeight="28.0" prefWidth="1000.0" text="Выйти">
+                        <content>
+                              <VBox prefWidth="1000.0" spacing="5.0">
+                                 <children>
+                                    <Button fx:id="quitAccount_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Из аккаунта" />
+                                    <Button fx:id="quitApp_BTN" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" text="Из приложения" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </VBox>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Accordion>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+        </items>
+      </SplitPane>
+   </children>
+</GridPane>

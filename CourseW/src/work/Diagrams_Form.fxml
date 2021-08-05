@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<!--suppress ALL -->
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.Diagrams_Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TitledPane fx:id="dimension_1_BOX" animated="false" collapsible="false" prefHeight="600.0" text="Одномерная диаграмма">
+         <content>
+            <PieChart fx:id="dimension_1_DIAGRAM" prefWidth="800.0" />
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="dimension_2_BOX" animated="false" collapsible="false" prefHeight="600.0" text="Двумерная диаграмма">
+         <content>
+            <LineChart fx:id="dimension_2_DIAGRAM" prefWidth="800.0">
+              <xAxis>
+                <CategoryAxis fx:id="dimension_2_CATEGORY" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="dimension_2_NUMBER" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="dimension_3_BOX" animated="false" collapsible="false" prefHeight="600.0" text="Трёхмерная диаграмма">
+         <content>
+            <StackedBarChart fx:id="dimension_3_DIAGRAM" prefWidth="800.0">
+              <xAxis>
+                <CategoryAxis fx:id="dimension_3_CATEGORY" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="dimension_3_NUMBER" side="LEFT" />
+              </yAxis>
+            </StackedBarChart>
+         </content>
+      </TitledPane>
+   </children>
+</GridPane>
